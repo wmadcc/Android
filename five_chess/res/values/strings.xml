@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">五道棋</string>
+    <string name="game_start">开始游戏</string>
+    <string name="game_help">规则说明</string>
+    <string name="game_name">五道棋</string>
+    <string name="start_text">开始游戏</string>
+    <string name="help_text">规则说明</string>
+    <string name="exit_text">退出游戏</string>
+    <string name="grab_text">去子</string>
+    <string name="giveup_text">认输</string>
+    <string name="choose_turn_text">请选择先手</string>
+    <string name="return_text">返回</string>
+
+</resources>

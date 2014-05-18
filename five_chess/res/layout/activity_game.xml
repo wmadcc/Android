@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/lemonchiffon" >
+	
+    <LinearLayout
+        android:id="@+id/blackLayout"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <Button
+            android:id="@+id/blackGiveup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:textSize="20sp"
+            android:textColor="@color/goldenrod"
+            android:text="@string/giveup_text"
+            style="?android:attr/buttonBarButtonStyle" />
+        
+        <Button
+            android:id="@+id/blackGrab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:textSize="20sp"
+            android:textColor="@color/goldenrod"
+            android:text="@string/grab_text"
+            style="?android:attr/buttonBarButtonStyle" />
+        
+    </LinearLayout>
+    
+   <LinearLayout 
+        android:id="@+id/yellowLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <Button
+            android:id="@+id/yellowGrab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:textSize="20sp"
+            android:textColor="@color/goldenrod"
+            android:text="@string/grab_text"
+            style="?android:attr/buttonBarButtonStyle" />
+        
+        <Button
+            android:id="@+id/yellowGiveup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:textSize="20sp"
+            android:textColor="@color/goldenrod"
+            android:text="@string/giveup_text"
+            style="?android:attr/buttonBarButtonStyle" />
+        
+    </LinearLayout>
+    
+	<LinearLayout
+	    	android:id="@+id/gameBoard"
+	    	android:layout_below="@id/blackLayout"
+	        android:layout_above="@id/yellowLayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical"
+	        android:gravity="center" >
+	    
+	</LinearLayout>
+</RelativeLayout>
