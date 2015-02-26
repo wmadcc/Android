@@ -6,8 +6,9 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="15"
-        android:targetSdkVersion="18" />
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+    <uses-permission android:maxSdkVersion="19" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:name="com.wmadcc.five_chess.game_appiication.GameApplication"
