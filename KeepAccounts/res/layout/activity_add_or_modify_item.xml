@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/addItemCustomTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/title_bar_padding"
+        android:background="@color/title_bar_bg"
+        android:gravity="center_vertical" >
+        
+		<TextView
+		    android:id="@+id/returnSummary"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_centerVertical="true"
+		    android:textColor="@color/white"
+		    android:textSize="@dimen/normal_text_size"
+		    android:text="@string/return_text" />
+		
+        <TextView
+            android:id="@+id/categoryTypeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dateDetailWayMark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:baselineAligned="false"
+        android:layout_below="@id/addItemCustomTitleBar"
+        android:padding="2dp" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="2dp" >
+            
+	        <TextView
+	            android:id="@+id/dateInput"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/custom_boder"
+	            android:gravity="center"
+	            android:paddingTop="3dp"
+	            android:paddingBottom="3dp" />
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="2dp" >
+            
+			<TextView
+			    android:id="@+id/detailInput"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:text="@string/detail_text"
+			    android:background="@drawable/custom_boder"
+			    android:gravity="center"
+	            android:paddingTop="3dp"
+	            android:paddingBottom="3dp" />
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="2dp" >
+            
+	        <TextView
+	            android:id="@+id/wayInput"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/custom_boder"
+	            android:gravity="center"
+	            android:paddingTop="3dp"
+	            android:paddingBottom="3dp" />
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="2dp" >
+            
+	        <CheckBox
+	            android:id="@+id/markInput"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:text="@string/mark_text"
+	            android:paddingTop="3dp"
+	            android:paddingBottom="3dp" />
+            
+        </RelativeLayout>
+                
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/categorySelect"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        android:layout_below="@id/dateDetailWayMark" 
+        android:layout_centerHorizontal="true" />
+    
+	<RelativeLayout
+        android:id="@+id/valueInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categorySelect"
+        android:layout_alignParentBottom="true" >
+
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/valueInputKeyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_alignParentBottom="true" />
+
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@id/valueInputKeyboard" >
+
+	        <ImageButton
+	            android:id="@+id/valueInputClear"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/clear"
+	            android:background="@color/transparent" />
+
+	        <EditText
+	            android:id="@+id/valueInput"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_centerVertical="true"
+	            android:layout_toLeftOf="@id/valueInputClear"
+	            android:gravity="right"
+	            android:inputType="numberDecimal"
+	            android:singleLine="true" />
+	    </RelativeLayout>
+	    
+    </RelativeLayout>    
+
+</RelativeLayout>

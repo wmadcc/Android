@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ContentDescription">
+        <ignore path="res/layout/activity_add_item.xml" />
+        <ignore path="res/layout/activity_add_or_modify_item.xml" />
+        <ignore path="res/layout/activity_summary.xml" />
+        <ignore path="res/layout/category_select_item.xml" />
+        <ignore path="res/layout/category_type_select_item.xml" />
+    </issue>
+</lint>

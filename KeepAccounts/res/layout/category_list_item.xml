@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="@dimen/list_item_height"
+    android:paddingRight="@dimen/list_item_right_padding"
+    android:paddingTop="@dimen/list_item_vertical_padding"
+    android:paddingBottom="@dimen/list_item_vertical_padding"  >
+    
+    <RelativeLayout
+        android:id="@+id/categoryImageLayout"
+        android:layout_width="@dimen/detail_list_category_width"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/list_item_left_padding" >
+    
+	    <ImageView
+	        android:id="@+id/categoryImage"
+	        android:layout_width="@dimen/category_icon_size"
+	        android:layout_height="@dimen/category_icon_size"
+	        android:padding="@dimen/category_icon_padding"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+	        android:scaleType="fitCenter"
+	        android:contentDescription="@string/category_image_desc" />
+	            
+	</RelativeLayout>
+	        
+    <TextView
+        android:id="@+id/costValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/grey_bg_color"
+        android:paddingLeft="@dimen/list_item_left_padding"
+        android:textSize="@dimen/list_item_value_text_size" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+	    android:layout_toLeftOf="@id/costValue"
+	    android:layout_toRightOf="@id/categoryImageLayout"
+	    android:layout_centerVertical="true" >
+    
+	    <TextView
+	        android:id="@+id/categoryText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+	        android:textSize="@dimen/list_item_detail_text_size" />
+	    
+	    <TextView
+	        android:id="@+id/categoryRatio"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="@dimen/list_item_left_padding"
+	        android:layout_toRightOf="@id/categoryText"
+	        android:textSize="@dimen/list_item_detail_text_size"
+	        android:layout_alignBottom="@id/categoryText" />
+	        
+	    <ProgressBar
+	        android:id="@+id/categoryRatioBar"
+	        style="?android:attr/progressBarStyleHorizontal"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/ratio_bar_height"
+	       	android:layout_below="@id/categoryText"
+	       	android:layout_marginTop="@dimen/ratio_bar_margin"
+	        android:max="100"
+	        android:progress="0" />
+	    
+	</RelativeLayout>
+
+</RelativeLayout>

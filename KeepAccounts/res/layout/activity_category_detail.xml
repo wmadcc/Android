@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+	
+    <RelativeLayout
+        android:id="@+id/categoryDetailTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/title_bar_padding"
+        android:background="@color/title_bar_bg"
+        android:gravity="center_vertical" >
+        
+		<TextView
+		    android:id="@+id/returnMonthSummary"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_centerVertical="true"
+		    android:textColor="@color/white"
+		    android:textSize="@dimen/normal_text_size"
+		    android:text="@string/return_text" />
+		
+        <TextView
+            android:id="@+id/categoryDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/category_detail_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+        
+    </RelativeLayout>
+        
+    <RelativeLayout
+        android:id="@+id/categoryItemSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/category_detail_vertical_margin"
+        android:layout_marginBottom="@dimen/category_detail_vertical_margin" />
+    
+	<TextView
+	    android:id="@+id/categoryDetailListTitle"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="left"
+	    android:background="@color/white"
+	    android:paddingLeft="@dimen/list_item_left_padding"
+	    android:paddingTop="@dimen/category_detail_vertival_padding"
+	    android:paddingBottom="@dimen/category_detail_vertival_padding"
+	    android:textSize="@dimen/list_title_text_size" />
+    
+    <ListView
+        android:id="@+id/categoryDetailList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+</LinearLayout>
