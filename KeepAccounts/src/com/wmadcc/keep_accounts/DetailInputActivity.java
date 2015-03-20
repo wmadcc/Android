@@ -107,9 +107,6 @@ public class DetailInputActivity extends Activity {
 					public void onClick(View v) {
 						Intent intent = getIntent();
 						String detail = detailInputDetail.getText().toString();
-						if (detail == null) {
-							detail = "";
-						}
 						intent.putExtra(StaticSettings.DETAIL, 
 								detail);
 						setResult(StaticSettings.DETAIL_CODE, intent);

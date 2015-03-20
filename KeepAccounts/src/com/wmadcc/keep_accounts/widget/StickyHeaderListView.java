@@ -144,9 +144,9 @@ public class StickyHeaderListView extends FrameLayout {
     
     private void ensureHeaderHasCorrectLayoutParams(View header) {
     	if (header != null) {
-	        ViewGroup.LayoutParams lp = header.getLayoutParams();
-	        lp = new LayoutParams(LayoutParams.MATCH_PARENT, 
-	        		LayoutParams.WRAP_CONTENT);
+	         ViewGroup.LayoutParams lp = 
+	        		 new LayoutParams(LayoutParams.MATCH_PARENT, 
+	        				 LayoutParams.WRAP_CONTENT);
 	        header.setLayoutParams(lp);
     	}
     }

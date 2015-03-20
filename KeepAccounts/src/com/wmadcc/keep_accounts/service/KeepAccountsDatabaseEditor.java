@@ -31,7 +31,7 @@ public class KeepAccountsDatabaseEditor {
 			}
 			
 			if (isItemExists(accountsItem))
-				UpdateAccountsItem(accountsItem);
+				updateAccountsItem(accountsItem);
 			else
 				insertAccountsItem(accountsItem);
 		} catch (Exception ex) {
@@ -191,7 +191,7 @@ public class KeepAccountsDatabaseEditor {
 		return false;
 	}
 
-	private boolean UpdateAccountsItem(
+	private boolean updateAccountsItem(
 			AccountsItem accountsItem) {
 		openDatebase();
 		closeDatebase();

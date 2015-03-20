@@ -399,6 +399,9 @@ public class MonthDetailFragment extends Fragment {
 						.findViewById(R.id.detailItemTitle);			
 				textView.setText(sectionHeader);
 				break;			
+				
+			default:
+				break;
 			}	
 			return convertView;
 		}

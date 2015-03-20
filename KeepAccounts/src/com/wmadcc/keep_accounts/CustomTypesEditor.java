@@ -251,7 +251,7 @@ public class CustomTypesEditor {
 	}
 	
 	public Drawable getCategoryDrawabe(boolean isEarning, String categoryName) {
-		if (categoryName == StaticSettings.ADD_CATEGORY_NAME) {
+		if (categoryName.equals(StaticSettings.ADD_CATEGORY_NAME)) {
 			return mActivity.getResources()
 					.getDrawable(R.drawable.add_category);
 		}

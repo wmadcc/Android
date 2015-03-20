@@ -513,8 +513,7 @@ public class AddOrModifyItemActivity extends Activity {
 	        				String newCategoryName = newCategoryEdit
 	        						.getText().toString().trim();
 	        				dialog.dismiss();
-	        				if (newCategoryName != null
-	        						&& !"".equals(newCategoryName)) {
+	        				if (!"".equals(newCategoryName)) {
 	        					CustomTypesEditor customTypesEditor = 
 	        							new CustomTypesEditor(AddOrModifyItemActivity.this);
 	        					if (currentCategoryType == EARNING_TYPE) {
@@ -573,8 +572,8 @@ public class AddOrModifyItemActivity extends Activity {
 						int currentPage = adapter.getCurrentPageNo();
 						final String itemName = (String) adapter.getItem(position);
 						if (currentPage < adapter.getCustomPageNum()
-								&& (StaticSettings
-										.ADD_CATEGORY_NAME != itemName)) {
+								&& (!StaticSettings
+										.ADD_CATEGORY_NAME.equals(itemName))) {
 							AlertDialog.Builder builder = 
 									new AlertDialog.Builder(AddOrModifyItemActivity.this);
 							builder.setTitle(itemName);
@@ -627,8 +626,7 @@ public class AddOrModifyItemActivity extends Activity {
 						        				if (newCategoryName.equals(itemName)) {
 						        					return;
 						        				}
-						        				if (newCategoryName != null
-						        						&& !"".equals(newCategoryName)) {
+						        				if (!"".equals(newCategoryName)) {
 						        					CustomTypesEditor customTypesEditor = 
 						        							new CustomTypesEditor(AddOrModifyItemActivity.this);
 						        					if (currentCategoryType == EARNING_TYPE) {
@@ -1193,7 +1191,7 @@ public class AddOrModifyItemActivity extends Activity {
 			int customCount = mCustomCategoryList.size();
 			for (int i = 0; i < customCount; i++) {
 				String categoryName = mCustomCategoryList.get(i);
-				if (StaticSettings.ADD_CATEGORY_NAME != categoryName) {
+				if (StaticSettings.ADD_CATEGORY_NAME.equals(categoryName)) {
 					customCategoryList.add(categoryName);
 				}
 			}

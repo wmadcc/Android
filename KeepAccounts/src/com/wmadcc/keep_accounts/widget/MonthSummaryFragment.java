@@ -560,6 +560,9 @@ public class MonthSummaryFragment extends Fragment {
 					costDeatil.setText(categoryName);
 				}
 				break;
+				
+			default:
+				break;
 			}
 			
 			return convertView;

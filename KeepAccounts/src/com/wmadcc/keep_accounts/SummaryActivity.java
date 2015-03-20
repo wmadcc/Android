@@ -174,6 +174,7 @@ public class SummaryActivity extends Activity {
 		    		break;
 		    	
 		    	default:
+		    		break;
 		    	}
 		    	return true;
 			}
@@ -196,7 +197,7 @@ public class SummaryActivity extends Activity {
     }
     
     private void setShownFragmentToDetail(boolean updateDisplay) {
-		if (shownFragment != MONTH_DETAIL_FRAGMENT) {
+		if (!shownFragment.equals(MONTH_DETAIL_FRAGMENT)) {
 			FragmentTransaction transaction = 
 					fragmentManager.beginTransaction();
 			transaction.show(mMonthDetailFragment);
@@ -214,7 +215,7 @@ public class SummaryActivity extends Activity {
     }
     
     private void setShownFragmentToSummary(boolean updateDisplay) {
-		if (shownFragment != MONTH_SUMMARY_FRAGMENT) {
+		if (!shownFragment.equals(MONTH_SUMMARY_FRAGMENT)) {
 			FragmentTransaction transaction = 
 					fragmentManager.beginTransaction();
 			transaction.show(mMonthSummaryFragment);
@@ -280,7 +281,7 @@ public class SummaryActivity extends Activity {
     
     public void refreshFragment() {
     	DecimalFormat sumDisplayFormat = new DecimalFormat("#,###,###,##0.00");
-    	if (shownFragment == MONTH_DETAIL_FRAGMENT) {
+    	if (shownFragment.equals(MONTH_DETAIL_FRAGMENT)) {
     		mMonthDetailFragment.setYearAndMonth(mYear, mMonth);
     		earningSumTextView
     		.setText(sumDisplayFormat
@@ -288,7 +289,7 @@ public class SummaryActivity extends Activity {
     		expenseSumTextView
     		.setText(sumDisplayFormat
     				.format(mMonthDetailFragment.getSumPayment()));
-    	} else if (shownFragment == MONTH_SUMMARY_FRAGMENT) {
+    	} else if (shownFragment.equals(MONTH_SUMMARY_FRAGMENT)) {
     		mMonthSummaryFragment.setYearAndMonth(mYear, mMonth);
     		earningSumTextView
     		.setText(sumDisplayFormat
