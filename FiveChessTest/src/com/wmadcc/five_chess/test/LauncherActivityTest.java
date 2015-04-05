@@ -26,7 +26,7 @@ public class LauncherActivityTest extends
 	
 	public void testOpenHelp() throws Exception {
 		solo.takeScreenshot();
-		solo.clickOnButton("¹æÔòËµÃ÷");
+		solo.clickOnButton("è§„åˆ™è¯´æ˜");
 		solo.assertCurrentActivity("Expected HelpActivity Activity",
 				"HelpActivity");
 		solo.takeScreenshot();
@@ -36,7 +36,7 @@ public class LauncherActivityTest extends
 	
 	public void testOpenChooseTurnActivity() throws Exception {
 		solo.takeScreenshot();
-		solo.clickOnButton("¿ªÊ¼ÓÎÏ·");
+		solo.clickOnButton("å¼€å§‹æ¸¸æˆ");
 		solo.assertCurrentActivity("Excepted ChooseTurnActivity Activity",
 				"ChooseTurnActivity");
 		solo.takeScreenshot();
@@ -46,15 +46,15 @@ public class LauncherActivityTest extends
 
 	public void testGoBackButton() throws Exception {
 		solo.takeScreenshot();
-		solo.clickOnButton("¿ªÊ¼ÓÎÏ·");
+		solo.clickOnButton("å¼€å§‹æ¸¸æˆ");
 		solo.takeScreenshot();
-		solo.clickOnButton("·µ»Ø");
+		solo.clickOnButton("è¿”å›");
 		solo.takeScreenshot();		
 	}
 	
 	public void testExitButton() throws Exception {
 		solo.takeScreenshot();
-		solo.clickOnButton("ÍË³ö");
+		solo.clickOnButton("é€€å‡º");
 		solo.takeScreenshot();
 	}
 	
