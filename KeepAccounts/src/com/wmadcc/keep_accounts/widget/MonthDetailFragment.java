@@ -281,7 +281,7 @@ public class MonthDetailFragment extends Fragment {
 					
 					StringBuffer stringBuffer = new StringBuffer();
 					stringBuffer.append((itemDay > 9 ? itemDay 
-							: "0" + itemDay ) + "ÈÕ-");
+							: "0" + itemDay ) + "æ—¥-");
 					String dayOfWeekText = 
 							dayOfWeekArray[calendar
 							               .get(Calendar.DAY_OF_WEEK) - 1];
