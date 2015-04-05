@@ -1,13 +1,13 @@
 package com.wmadcc.five_chess;
 
-import com.wmadcc.five_chess.game_appiication.GameApplication;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
+import com.wmadcc.five_chess.game_appiication.GameApplication;
 
 public class StartActivity extends Activity
 			implements OnClickListener {
@@ -55,6 +55,9 @@ public class StartActivity extends Activity
 			
 		case R.id.exitButton:
 			finish();
+			
+		default:
+			break;
 		}
 	}
 

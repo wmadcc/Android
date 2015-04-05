@@ -146,7 +146,7 @@ public class GameControl extends StateMachine {
 		
 	public void gameOverAction() {
 		Toast.makeText(context, 
-				"»ñÊ¤ÕßÊÇ" + gameWinner,
+				"èŽ·èƒœè€…æ˜¯" + gameWinner,
 				Toast.LENGTH_LONG).show();
 	}
 		
@@ -185,6 +185,9 @@ public class GameControl extends StateMachine {
 			gameWinner = config.YELLOW_NAME;
 			setState(config.GAME_OVER_NAME);
 			operateAction();
+			break;
+			
+		default:
 			break;
 		}
 	}

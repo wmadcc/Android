@@ -35,8 +35,8 @@ public class GameApplication extends Application {
 		
 		public final float EFFECTIVE_RANGE = 1.2f;
 		
-		public final String YELLOW_NAME = "»ÆÉ«Ò»·½";
-		public final String BLACK_NAME = "×ÏÉ«Ò»·½";
+		public final String YELLOW_NAME = "é»„è‰²ä¸€æ–¹";
+		public final String BLACK_NAME = "ç´«è‰²ä¸€æ–¹";
 		public final int YELLOW_VALUE = 1;
 		public final int BLACK_VALUE = -1;
 		

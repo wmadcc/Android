@@ -199,41 +199,39 @@ public class Chessboard extends View
 		targetX = dx;
 		targetY = dy;
 		
-		if(chess != null) {
-			float endX, endY;
-			endX = zeroPointX + xStep * targetX;
-			endY = zeroPointY + yStep * targetY;
-			
-			ValueAnimator animX = ObjectAnimator
-					.ofFloat(chess, "centerX", endX);
-			animX.setInterpolator(new LinearInterpolator());
-			animX.setDuration(config
-					.CHESS_MOVE_DURATION);
-			animX.addUpdateListener(this);
-			
-			ValueAnimator animY = ObjectAnimator
-					.ofFloat(chess, "centerY", endY);
-			animY.setInterpolator(new LinearInterpolator());
-			animY.setDuration(config
-					.CHESS_MOVE_DURATION);
-			animY.addUpdateListener(this);
-			
-			animX.addListener(new AnimatorListenerAdapter(){
-				@Override
-				public void onAnimationEnd(Animator anim) {
-					chessMap[startX][startY] = 0;
-					chess.setIndexX(targetX);
-					chess.setIndexY(targetY);
-					chessMap[targetX][targetY] = chess.getValue();
-					inAction = false;
-					gameControl.getNextState();
-				}
-			});
-			
-			AnimatorSet animMove = new AnimatorSet();
-			animMove.play(animX).with(animY);
-			animMove.start();
-		}
+		float endX, endY;
+		endX = zeroPointX + xStep * targetX;
+		endY = zeroPointY + yStep * targetY;
+		
+		ValueAnimator animX = ObjectAnimator
+				.ofFloat(chess, "centerX", endX);
+		animX.setInterpolator(new LinearInterpolator());
+		animX.setDuration(config
+				.CHESS_MOVE_DURATION);
+		animX.addUpdateListener(this);
+		
+		ValueAnimator animY = ObjectAnimator
+				.ofFloat(chess, "centerY", endY);
+		animY.setInterpolator(new LinearInterpolator());
+		animY.setDuration(config
+				.CHESS_MOVE_DURATION);
+		animY.addUpdateListener(this);
+		
+		animX.addListener(new AnimatorListenerAdapter(){
+			@Override
+			public void onAnimationEnd(Animator anim) {
+				chessMap[startX][startY] = 0;
+				chess.setIndexX(targetX);
+				chess.setIndexY(targetY);
+				chessMap[targetX][targetY] = chess.getValue();
+				inAction = false;
+				gameControl.getNextState();
+			}
+		});
+		
+		AnimatorSet animMove = new AnimatorSet();
+		animMove.play(animX).with(animY);
+		animMove.start();
 	}
 	
 	public Point judgeMove(int indexX, int indexY) {
@@ -318,35 +316,33 @@ public class Chessboard extends View
 		targetX = indexX;
 		targetY = indexY;
 		
-		if(chess != null) {
-			ValueAnimator expand = ObjectAnimator
-					.ofFloat(chess, "radius", 1.3F * chessRadius);
-			expand.setInterpolator(new AccelerateInterpolator());
-			expand.setDuration(config
-					.CHESS_REMOVE_EXPAND_DURATION);
-			expand.addUpdateListener(this);
-			
-			ValueAnimator minify = ObjectAnimator
-					.ofFloat(chess, "radius", 0);
-			minify.setInterpolator(new AccelerateInterpolator());
-			minify.setDuration(config
-					.CHESS_REMOVE_MINIFY_DURATION);
-			minify.addUpdateListener(this);
-			
-			minify.addListener(new AnimatorListenerAdapter(){
-				@Override
-				public void onAnimationEnd(Animator anim) {
-					chesses.remove(chess);
-					chessMap[targetX][targetY] = 0;
-					inAction = false;
-					gameControl.getNextState();
-				}
-			});
+		ValueAnimator expand = ObjectAnimator
+				.ofFloat(chess, "radius", 1.3F * chessRadius);
+		expand.setInterpolator(new AccelerateInterpolator());
+		expand.setDuration(config
+				.CHESS_REMOVE_EXPAND_DURATION);
+		expand.addUpdateListener(this);
+		
+		ValueAnimator minify = ObjectAnimator
+				.ofFloat(chess, "radius", 0);
+		minify.setInterpolator(new AccelerateInterpolator());
+		minify.setDuration(config
+				.CHESS_REMOVE_MINIFY_DURATION);
+		minify.addUpdateListener(this);
+		
+		minify.addListener(new AnimatorListenerAdapter(){
+			@Override
+			public void onAnimationEnd(Animator anim) {
+				chesses.remove(chess);
+				chessMap[targetX][targetY] = 0;
+				inAction = false;
+				gameControl.getNextState();
+			}
+		});
 
-			AnimatorSet disappear = new AnimatorSet();
-			disappear.play(expand).before(minify);
-			disappear.start();
-		}
+		AnimatorSet disappear = new AnimatorSet();
+		disappear.play(expand).before(minify);
+		disappear.start();
 	}
 	
 	public int[] getChessNum() {

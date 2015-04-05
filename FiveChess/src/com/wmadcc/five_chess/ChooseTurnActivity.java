@@ -51,6 +51,8 @@ public class ChooseTurnActivity extends Activity
 		case R.id.returnButton:
 			finish();
 			break;
+		default:
+			break;
 		}
 		
 	}

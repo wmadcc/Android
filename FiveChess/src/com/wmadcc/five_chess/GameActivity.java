@@ -78,9 +78,9 @@ public class GameActivity extends Activity
 				super.gameOverAction();
 				AlertDialog.Builder builder = 
 						new AlertDialog.Builder(this.context);
-				builder.setMessage("»ñÊ¤ÕßÊÇ" + gameControl.getWinner()
-						+ "£¡ÇëÈ·¶¨");
-				builder.setPositiveButton("È·¶¨", new OnClickListener(){
+				builder.setMessage("è·èƒœè€…æ˜¯" + gameControl.getWinner()
+						+ "ï¼è¯·ç¡®å®š");
+				builder.setPositiveButton("ç¡®å®š", new OnClickListener(){
 					@Override
 					public void onClick(DialogInterface dialog, int which) {	
 						finish();
@@ -154,14 +154,17 @@ public class GameActivity extends Activity
 		case R.id.yellowGrab:
 			gameControl.clickYellowGrab();
 			break;
+			
+		default:
+			break;
 		}
 	}
 	
 	public void confirmGiveup(final boolean isYellow) {
 		AlertDialog.Builder builder = 
 				new AlertDialog.Builder(this);
-		builder.setMessage("È·ÈÏÈÏÊä£¿");
-		builder.setPositiveButton("È·¶¨", new OnClickListener(){
+		builder.setMessage("ç¡®è®¤è®¤è¾“ï¼Ÿ");
+		builder.setPositiveButton("ç¡®å®š", new OnClickListener(){
 			@Override
 			public void onClick(DialogInterface dialog, int which) {	
 				if(isYellow) 
@@ -170,7 +173,7 @@ public class GameActivity extends Activity
 					gameControl.clickBlackGiveup();
 			}
 		});
-		builder.setNegativeButton("È¡Ïû", new OnClickListener(){
+		builder.setNegativeButton("å–æ¶ˆ", new OnClickListener(){
 			@Override
 			public void onClick(DialogInterface dialog, int which) {	
 			}
